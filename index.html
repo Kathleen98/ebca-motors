@@ -173,7 +173,7 @@
     </section>
 
     <!-- entre em contato -->
-    <section>
+    <section id="contato">
         <div class="container">
             <h2>Entre em contato</h2>
             <form>
@@ -191,7 +191,7 @@
                 </div>
                 <div class="form-campo">
                     <label for="veiculo-interesse">Veículo de interesse:</label>
-                    <input type="text" id="veiculo-interesse" name="veiculo-interesse">
+                    <input type="text" id="veiculo-interesse" name="veiculoDeInteresse">
                 </div>
                 <div class="form-campo">
                     <label for="mensagem">Mensagem:</label>
@@ -233,44 +233,6 @@
     <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/messages_pt_BR.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#carousel-img').slick({
-                autoplay:true,
-            });
-
-            $('.menu-hamburguer').click(function(){
-                $('nav').slideToggle();
-            })
-
-            $('#telefone').mask('(00) 00000-0000');
-
-            $('form').validate({
-                rules: {
-                    nome:{
-                        required: true
-                    },
-                    email:{
-                        required: true,
-                        email:true
-                    },
-                    telefone:{
-                        required: true
-                    }
-                }, messeges:{
-                    nome: 'Por favor, insira seu nome'
-                },
-                submitHandler: function(form){
-                    console.log(form)
-                },
-                invalidHandler: function(evento, validador){
-                    let campoIncorreto = validador.numberOfInvalids();
-                    console.log(campoIncorreto)
-                }
-            })
-        })
-
-        
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
